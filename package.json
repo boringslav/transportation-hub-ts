@@ -1,0 +1,36 @@
+{
+  "name": "transportation-hub-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "build": "npx tsc",
+    "prettier-watch": "onchange src/**/*.ts -- prettier --write {{changed}}",
+    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boringslav/transportation-hub-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boringslav/transportation-hub-ts/issues"
+  },
+  "homepage": "https://github.com/boringslav/transportation-hub-ts#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-shopify": "^35.1.0",
+    "nodemon": "^2.0.15",
+    "onchange": "^7.1.0",
+    "prettier": "^2.5.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
