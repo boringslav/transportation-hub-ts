@@ -16,7 +16,6 @@ export default class Freighter extends Vehicle implements IFreighter {
     super(licensePlate, totalKm, makeAndModel, gasUsagePerKm);
     this.maxWeight = maxWeight;
     this.maxVolume = maxVolume;
-    this.subType = 'Freighter';
   }
   getVehicleInfo(): object {
     const baseVehicleInfo = super.getVehicleInfo();
