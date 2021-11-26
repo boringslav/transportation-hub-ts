@@ -3,24 +3,21 @@ import Vehicle from "./classes/Vehicle";
 import Freighter from "./classes/Freighter";
 import Passenger from "./classes/Passenger";
 import Car from "./classes/vehicles/Car";
+import VanF from "./classes/vehicles/VanF";
+import VanP from "./classes/vehicles/VanP";
+
 function App() {
-  const p1: Passenger = new Passenger(
-    10,
-    "booob",
-    100,
-    "porsche panamera turbo s",
-    1.5
-  );
+  const v1: VanF = new VanF("borko", 10, 1000, 20, "vanFr", 3);
+  v1.calculatePricePerKm();
+  v1.calculateConsumedFuel();
 
-  const c1: Car = new Car(4, "borko", 100, "Audi", 1);
-  c1.calculatePricePerKm();
-  c1.calculateConsumedFuel();
+  const v2: VanP = new VanP(12, "nzz", 60, "audi", 1.5);
 
-  p1.calculatePricePerKm();
-  p1.calculateConsumedFuel();
+  v2.calculatePricePerKm();
+  v2.calculateConsumedFuel();
 
-  console.log(p1.getVehicleInfo());
-  console.log(c1.getVehicleInfo());
+  console.log(v1.getVehicleInfo());
+  console.log(v2.getVehicleInfo());
 
   return <div className="App"></div>;
 }
