@@ -1,12 +1,12 @@
 export default class Vehicle {
-  #makeAndModel: string;
-  #licensePlate: string;
-  #gasUsagePerKm: number;
-  #pricePerKm: number;
-  #consumedFuel: number;
-  #totalKm: number;
-  #type: string;
-  #subType: string;
+  makeAndModel: string;
+  licensePlate: string;
+  gasUsagePerKm: number;
+  pricePerKm: number;
+  consumedFuel: number;
+  totalKm: number;
+  type: string;
+  subType: string;
 
   constructor(
     licensePlate: string,
@@ -14,92 +14,92 @@ export default class Vehicle {
     makeAndModel?: string,
     gasUsagePerKm?: number
   ) {
-    this.#licensePlate = licensePlate;
-    this.#totalKm = totalKm;
-    this.#consumedFuel = this.#totalKm * this.#gasUsagePerKm;
+    this.licensePlate = licensePlate;
+    this.totalKm = totalKm;
+    this.consumedFuel = this.totalKm * this.gasUsagePerKm;
     if (makeAndModel) {
-      this.#makeAndModel = makeAndModel;
+      this.makeAndModel = makeAndModel;
     }
     if (gasUsagePerKm) {
-      this.#gasUsagePerKm = gasUsagePerKm;
+      this.gasUsagePerKm = gasUsagePerKm;
     }
   }
 
-  getVehicleInfo() {
+  getVehicleInfo(): object {
     return {
-      makeAndModel: this.#makeAndModel,
-      licensePlate: this.#licensePlate,
-      gasUsagePerKm: this.#gasUsagePerKm,
-      pricePerKm: this.#pricePerKm,
-      totalKm: this.#totalKm,
-      consumedFuel: this.#consumedFuel,
-      type: this.#type,
-      subType: this.#subType
+      makeAndModel: this.makeAndModel,
+      licensePlate: this.licensePlate,
+      gasUsagePerKm: this.gasUsagePerKm,
+      pricePerKm: this.pricePerKm,
+      totalKm: this.totalKm,
+      consumedFuel: this.consumedFuel,
+      type: this.type,
+      subType: this.subType
     };
   }
 
   getPricePerKm(): number {
-    return this.#pricePerKm;
+    return this.pricePerKm;
   }
   calculatePricePerKm(): string {
-    this.#pricePerKm = 100 / this.#gasUsagePerKm;
-    return this.#pricePerKm.toFixed(2);
+    this.pricePerKm = 100 / this.gasUsagePerKm;
+    return this.pricePerKm.toFixed(2);
   }
 
   getMakeAndModel(): string {
-    return this.#makeAndModel;
+    return this.makeAndModel;
   }
 
   setMakeAndModel(makeAndModel: string): void {
-    this.#makeAndModel = makeAndModel;
+    this.makeAndModel = makeAndModel;
   }
 
   getLicensePlate(): string {
-    return this.#licensePlate;
+    return this.licensePlate;
   }
 
   setLicensePlate(licensePlate: string): void {
-    this.#licensePlate = licensePlate;
+    this.licensePlate = licensePlate;
   }
 
   getGasUsagePerKm(): number {
-    return this.#gasUsagePerKm;
+    return this.gasUsagePerKm;
   }
 
   setGasUsagePerKm(gasUsagePerKm: number): void {
-    this.#gasUsagePerKm = gasUsagePerKm;
+    this.gasUsagePerKm = gasUsagePerKm;
   }
 
   calculateConsumedFuel(): string {
-    this.#consumedFuel = this.#totalKm * this.#gasUsagePerKm;
-    return this.#consumedFuel.toFixed(2);
+    this.consumedFuel = this.totalKm * this.gasUsagePerKm;
+    return this.consumedFuel.toFixed(2);
   }
 
   getConsumedFuel(): number {
-    return this.#consumedFuel;
+    return this.consumedFuel;
   }
 
   setTotalKm(totalKm: number): void {
-    this.#totalKm = totalKm;
+    this.totalKm = totalKm;
   }
 
   getTotalKm(): number {
-    return this.#totalKm;
+    return this.totalKm;
   }
 
   getType(): string {
-    return this.#type;
+    return this.type;
   }
 
   setType(type: string): void {
-    this.#type = type;
+    this.type = type;
   }
 
   getSubType(): string {
-    return this.#subType;
+    return this.subType;
   }
 
   setSubType(subType: string): void {
-    this.#subType = subType;
+    this.subType = subType;
   }
 }
